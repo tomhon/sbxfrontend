@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<title>SBX Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="buttonStyles.css">
+<body style="max-width:600px">
+
+<nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+<div class="w3-container w3-theme-d2">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+  <br>
+</div>
+<a onclick="showRaceSetupContainer()" class="w3-bar-item w3-button" href="#">Race Setup </a>
+<a onclick="showStartContainer()" class="w3-bar-item w3-button" href="#">Start</a>
+<a onclick="showHoleContainer()" class="w3-bar-item w3-button" href="#">Hole</a>
+<a onclick="showSplit1Container()" class="w3-bar-item w3-button" href="#">Split 1</a>
+<a onclick="showFinishContainer()" class="w3-bar-item w3-button" href="#">Finish</a>
+<a onclick="showDashboardContainer()" class="w3-bar-item w3-button" href="#">Dashboard</a>
+</nav>
+
+<header class="w3-bar w3-card w3-theme">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+  <h1 class="w3-bar-item">SBX Tracker</h1>
+</header>
+
+<!-- <nav class="w3-bar-block w3-card" id="inGameTracking"></nav> -->
+<!-- buttons for Passes, Tackles, Dribbles & Goals -->
+<div class="w3-container" id="raceSetupContainer">
+    <div class="w3-cell-row w3-red">
+            <h4>Passes</h4>
+            <!-- <input type="button" id="successfulPassButton" class="w3-button w3-black w3-border" value="Successful" onclick="successfulPass()"> -->
+            <input type="button" id="successfulPassButton" class="w3-button w3-black w3-border" value="Successful" 
+            onclick="postStatusUpdate('successfulPass','successfulPassButton', 'Successful');">
+            <input type="button" id="attemptedPassButton" class="w3-button w3-black w3-border" value="Attempted" 
+            onclick="postStatusUpdate('attemptedPass','attemptedPassButton', 'Attempted');">
+        </div>  
+    <div class="w3-cell-row">
+            <h4>Tackles</h4>
+            <input type="button" class="w3-button w3-black  w3-border" value="Successful" 
+               id="successfulTackleButton" onclick="postStatusUpdate('successfulTackle','successfulTackleButton', 'Successful');">
+            <input type="button" class="w3-button w3-black  w3-border" value="Attempted" 
+               id="attemptedTackleButton" onclick="postStatusUpdate('attemptedTackle','attemptedTackleButton', 'Attempted');">
+        </div> 
+    <div class="w3-cell-row">
+            <h4>Dribbles</h4>
+            <input type="button" class="w3-button w3-black  w3-border" value="Successful" 
+                id="successfulDribbleButton" onclick="postStatusUpdate('successfulDribble','successfulDribbleButton', 'Successful');">
+            <input type="button" class="w3-button w3-black  w3-border" value="Attempted" 
+                id="attemptedDribbleButton" onclick="postStatusUpdate('attemptedDribble','attemptedDribbleButton', 'Attempted');">
+        </div> 
+    <div class="w3-cell-row">
+            <h4>Shots</h4>
+            <input type="button" class="w3-button w3-black  w3-border" value="On Frame" 
+                id="shotOnFrameButton" onclick="postStatusUpdate('shotOnFrame','shotOnFrameButton', 'On Frame');">
+            <input type="button" class="w3-button w3-black  w3-border" value="Off Frame" 
+                id="shotOffFrameButton" onclick="postStatusUpdate('shotOffFrame','shotOffFrameButton', 'Off Frame');">
+        </div> 
+    <div class="w3-cell-row">
+            <h4>Score</h4>
+            <input type="button" class="w3-button w3-black  w3-border" value="Goal" 
+                id="goalButton" onclick="postStatusUpdate('goal','goalButton', 'Goal');">
+            <input type="button" class="w3-button w3-black  w3-border" value="Assist" 
+                id="assistButton" onclick="postStatusUpdate('assist','assistButton', 'Assist');">
+        </div> 
+    </div>
+<!-- bottons for Free Kick, Corner, Penalty, Fouls -->
+<div class="w3-container" id="startContainer">
+        <div class="w3-cell-row">
+                <h4>Start: Assign Bibs to Lanes</h4>
+                <div class="dropdown">
+                    <button class="dropbtnLane1">Lane 1</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtnLane2">Lane 2</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtnLane3">Lane 3</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtnLane4">Lane 4</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtnLane5">Lane 5</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtnLane6">Lane 6</button>
+                    <div class="dropdown-content">
+                        <a class="redBib" onclick="updateLaneColor('Start', 'Lane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor('Start', 'Lane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor('Start', 'Lane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor('Start', 'Lane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor('Start', 'Lane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor('Start', 'Lane1','White');">White</a>
+                    </div>
+                </div>
+
+        </div>  
+    </div>
+
+<!-- bottons for KickOff, Final Whistle, Substitutions -->
+<div class="w3-container" id="holeContainer">
+    <div class="w3-cell-row">
+        <h4>Hole: Assign Bibs to Lanes</h4>
+            <input type="text" value="Color Checkbox" 
+                id="lane1Input" onclick="buttonHandler('lane1Input');">
+            <input type="button" class="w3-button w3-black" value="Lane1" 
+                id="lane1Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
+            <input type="button" class="w3-button w3-black" value="Lane2" 
+                id="lane2Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
+            <input type="button" class="w3-button w3-black" value="Lane3" 
+                id="lane3Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
+            <input type="button" class="w3-button w3-black" value="Lane4" 
+                id="lane4Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
+            <input type="button" class="w3-button w3-black" value="Lane5" 
+                id="lane5Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
+            <input type="button" class="w3-button w3-black" value="Lane6" 
+                id="lane6Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
+        </div> 
+    </div>
+<!-- Input Player Details -->
+<div class="w3-container" id="split1Container">
+        <div class="w3-bar w3-light-grey">
+            <h4>Player Name</h4>
+            <input id="playerName" type="text" class="w3-bar-item w3-input w3-border"
+            id="playerNameText" onchange="console.log('input value =' + document.getElementById('playerNameText').value)">
+            <!-- id="playerNameText" onchange="debugInput('playerName','playerNameText', 'Player Name');"> -->
+            <!-- id="playerNameText" onchange="postStatusUpdate('playerName','playerNameText', 'Player Name');"> -->
+            </div>
+        <div class="w3-bar w3-light-grey">
+            <h4>Player Number</h4>
+            <input id="playerNumber" type="text" class="w3-bar-item w3-input w3-border">
+            </div> 
+        <div class="w3-bar w3-light-grey">
+            <h4>Player Team</h4>
+            <input id="playerTeam" type="text" class="w3-bar-item w3-input w3-border" >
+             </div>
+        <div class="w3-bar w3-light-grey">
+            <h4>Player Club</h4>
+            <input id="playerClub" type="text" class="w3-bar-item w3-input w3-border" >
+            </div>  
+    </div>
+
+<!-- Input Game Details -->
+<div class="w3-container" id="finishContainer">
+        <div class="w3-bar w3-light-grey">
+            <h4>Player Team Home or Away</h4>
+            <input id="playerTeamHomeAway" type="text" class="w3-bar-item w3-input w3-border">
+            </div>
+        <div class="w3-bar w3-light-grey">
+            <h4>Opponent Team</h4>
+            <input id="opponentTeam" type="text" class="w3-bar-item w3-input w3-border">
+            </div>
+        <div class="w3-bar w3-light-grey">
+            <h4>Opponent Club</h4>
+            <input id="opponentClub" type="text" class="w3-bar-item w3-input w3-border">
+            </div> 
+        <div class="w3-bar w3-light-grey">
+            <h4>Game Location</h4>
+            <input id="gameLocation" type="text" class="w3-bar-item w3-input w3-border" >
+                </div>
+        <div class="w3-bar w3-light-grey">
+            <h4>Game Field</h4>
+            <input id="gameField" type="text" class="w3-bar-item w3-input w3-border" >
+            </div> 
+        </div>
+
+<!-- bottons for New Game and New Player -->
+<div class="w3-container" id="dashboardContainer">
+    <div class="w3-cell-row">
+            <h4>Maintenance</h4>
+                <input type="button" class="w3-button w3-black" value="New Game" 
+                    id="newGameButton" onclick="postStatusUpdate('newGame','newGameButton', 'New Game');">
+                <input type="button" class="w3-button w3-black" value="New Player" 
+                    id="newPlayerButton" onclick="postStatusUpdate('newPlayer','newPlayerButton', 'New Player');">
+    </div>  
+</div>
+
+<footer class="w3-container w3-theme w3-margin-top">
+  <h4>Footer</h4>
+</footer>
+
+
+<script src="postStatusUpdate.js"></script>
+<script src="containerDisplay.js"></script>
+<script src="updateElapsedTime.js"></script>
+<script src="controller.js"></script>
+<script src="buttonHandler.js"></script>
+<script>
+    function debugInput (status, buttonID, buttonText) {
+        console.log('status:' + status);
+        console.log('buttonId:' + buttonID);
+        console.log('buttonText:' + buttonText);
+        console.log(document.getElementById("buttonID").value);
+    }
+
+</script>
+
+</body>
+
