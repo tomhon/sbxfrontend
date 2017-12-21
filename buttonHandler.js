@@ -1,18 +1,21 @@
-function updateLaneColor(courseLocation, laneSelected, colorSelected) {
+function updateLaneColor(courseLocation, buttonSelected, colorSelected) {
     // colorSelected = document.getElementById(laneSelected).value;
-    console.log(courseLocation, laneSelected, colorSelected);
-    refreshLaneButtonBackgrounds(courseLocation);
-    // start.laneSelected = colorSelected;
-    document.getElementById(laneSelected).style.backgroundColor = colorSelected;
+    console.log(courseLocation, buttonSelected, colorSelected);
+    var item;
+    for (item in courseLocation) {
+        if (courseLocation[item] === colorSelected) {courseLocation[item]='teal'}
+    }
+
+    courseLocation[buttonSelected] = colorSelected;
     
+    for (item in courseLocation) {
+        document.getElementById(item).style.backgroundColor = courseLocation[item];
+        if (courseLocation[item] === 'Yellow' || courseLocation[item] === 'White' ) {
+            document.getElementById(item).style.color = "Black";
+        } else {
+            document.getElementById(item).style.color = "White";
+        }
+    }
+
 };
 
-
-function refreshLaneButtonBackgrounds(courseLocation) {
-    document.getElementById("buttonLane1").style.backgroundColor = start.buttonLane1;
-    document.getElementById("buttonLane2").style.backgroundColor = start.buttonLane2;
-    document.getElementById("buttonLane3").style.backgroundColor = start.buttonLane3;
-    document.getElementById("buttonLane4").style.backgroundColor = start.buttonLane4;
-    document.getElementById("buttonLane5").style.backgroundColor = start.buttonLane5;
-    document.getElementById("buttonLane6").style.backgroundColor = start.buttonLane6;
-}
