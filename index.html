@@ -67,145 +67,304 @@
                 id="assistButton" onclick="postStatusUpdate('assist','assistButton', 'Assist');">
         </div> 
     </div>
-<!-- bottons for Free Kick, Corner, Penalty, Fouls -->
+<!-- Buttons to assign Bibs to Start Lanes -->
 <div class="w3-container" id="startContainer">
         <div class="w3-cell-row">
                 <h4>Start: Assign Bibs to Lanes</h4>
                 <div class="dropdown">
-                    <button id="buttonLane1" class="dropbtnLane">Lane 1</button>
+                    <button id="startLane1" class="dropbtnLane">Lane 1</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane1','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane1','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane1','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane1','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane1','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane1','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane1','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane1','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane1','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane1','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane1','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane1','White');">White</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button id="buttonLane2" class="dropbtnLane">Lane 2</button>
+                    <button id="startLane2" class="dropbtnLane">Lane 2</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane2','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane2','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane2','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane2','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane2','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane2','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane2','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane2','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane2','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane2','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane2','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane2','White');">White</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button id="buttonLane3" class="dropbtnLane">Lane 3</button>
+                    <button id="startLane3" class="dropbtnLane">Lane 3</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane3','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane3','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane3','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane3','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane3','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane3','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane3','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane3','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane3','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane3','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane3','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane3','White');">White</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button id="buttonLane4" class="dropbtnLane">Lane 4</button>
+                    <button id="startLane4" class="dropbtnLane">Lane 4</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane4','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane4','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane4','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane4','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane4','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane4','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane4','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane4','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane4','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane4','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane4','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane4','White');">White</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button id="buttonLane5" class="dropbtnLane">Lane 5</button>
+                    <button id="startLane5" class="dropbtnLane">Lane 5</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane5','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane5','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane5','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane5','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane5','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane5','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane5','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane5','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane5','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane5','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane5','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane5','White');">White</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button id="buttonLane6" class="dropbtnLane">Lane 6</button>
+                    <button id="startLane6" class="dropbtnLane">Lane 6</button>
                     <div class="dropdown-content">
-                        <a class="redBib" onclick="updateLaneColor(start, 'buttonLane6','Red');">Red</a>
-                        <a class="greenBib" onclick="updateLaneColor(start, 'buttonLane6','Green');">Green</a>
-                        <a class="blueBib" onclick="updateLaneColor(start, 'buttonLane6','Blue');">Blue</a>
-                        <a class="yellowBib" onclick="updateLaneColor(start, 'buttonLane6','Yellow');">Yellow</a>
-                        <a class="blackBib" onclick="updateLaneColor(start, 'buttonLane6','Black');">Black</a>
-                        <a class="whiteBib" onclick="updateLaneColor(start, 'buttonLane6','White');">White</a>
+                        <a class="redBib" onclick="updateLaneColor(start, 'startLane6','Red');">Red</a>
+                        <a class="greenBib" onclick="updateLaneColor(start, 'startLane6','Green');">Green</a>
+                        <a class="blueBib" onclick="updateLaneColor(start, 'startLane6','Blue');">Blue</a>
+                        <a class="yellowBib" onclick="updateLaneColor(start, 'startLane6','Yellow');">Yellow</a>
+                        <a class="blackBib" onclick="updateLaneColor(start, 'startLane6','Black');">Black</a>
+                        <a class="whiteBib" onclick="updateLaneColor(start, 'startLane6','White');">White</a>
                     </div>
                 </div>
-        </div>  
+            </div>
+            <br>
+            <div class="w3-light-grey">
+                    <div id = "progressBar" class="w3-container w3-blue" style="width:0%; background-color: green"></div>
+            </div><br>
+            <div>
+                    <button class="w3-button w3-block w3-green">Submit</button>
+            </div>
+         
     </div>
 
-<!-- bottons for KickOff, Final Whistle, Substitutions -->
+<!-- Buttons to assign Colors to place at Hole -->
 <div class="w3-container" id="holeContainer">
     <div class="w3-cell-row">
-        <h4>Hole: Assign Bibs to Lanes</h4>
-            <input type="text" value="Color Checkbox" 
-                id="lane1Input" onclick="buttonHandler('lane1Input');">
-            <input type="button" class="w3-button w3-black" value="Lane1" 
-                id="lane1Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
-            <input type="button" class="w3-button w3-black" value="Lane2" 
-                id="lane2Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
-            <input type="button" class="w3-button w3-black" value="Lane3" 
-                id="lane3Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
-            <input type="button" class="w3-button w3-black" value="Lane4" 
-                id="lane4Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
-            <input type="button" class="w3-button w3-black" value="Lane5" 
-                id="lane5Button" onclick="postStatusUpdate('freeKick','freeKickButton', 'Free Kick');">
-            <input type="button" class="w3-button w3-black" value="Lane6" 
-                id="lane6Button" onclick="postStatusUpdate('corner','cornerButton', 'Corner');">  
-        </div> 
-    </div>
-<!-- Input Player Details -->
-<div class="w3-container" id="split1Container">
-        <div class="w3-bar w3-light-grey">
-            <h4>Player Name</h4>
-            <input id="playerName" type="text" class="w3-bar-item w3-input w3-border"
-            id="playerNameText" onchange="console.log('input value =' + document.getElementById('playerNameText').value)">
-            <!-- id="playerNameText" onchange="debugInput('playerName','playerNameText', 'Player Name');"> -->
-            <!-- id="playerNameText" onchange="postStatusUpdate('playerName','playerNameText', 'Player Name');"> -->
+        <h4>Hole: Assign Bibs to Positions</h4>
+        <div class="dropdown">
+            <button id="hole1stPlace" class="dropbtnLane">1st Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole1stPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole1stPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole1stPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole1stPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole1stPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole1stPlace','White');">White</a>
             </div>
-        <div class="w3-bar w3-light-grey">
-            <h4>Player Number</h4>
-            <input id="playerNumber" type="text" class="w3-bar-item w3-input w3-border">
-            </div> 
-        <div class="w3-bar w3-light-grey">
-            <h4>Player Team</h4>
-            <input id="playerTeam" type="text" class="w3-bar-item w3-input w3-border" >
-             </div>
-        <div class="w3-bar w3-light-grey">
-            <h4>Player Club</h4>
-            <input id="playerClub" type="text" class="w3-bar-item w3-input w3-border" >
-            </div>  
-    </div>
-
-<!-- Input Game Details -->
-<div class="w3-container" id="finishContainer">
-        <div class="w3-bar w3-light-grey">
-            <h4>Player Team Home or Away</h4>
-            <input id="playerTeamHomeAway" type="text" class="w3-bar-item w3-input w3-border">
-            </div>
-        <div class="w3-bar w3-light-grey">
-            <h4>Opponent Team</h4>
-            <input id="opponentTeam" type="text" class="w3-bar-item w3-input w3-border">
-            </div>
-        <div class="w3-bar w3-light-grey">
-            <h4>Opponent Club</h4>
-            <input id="opponentClub" type="text" class="w3-bar-item w3-input w3-border">
-            </div> 
-        <div class="w3-bar w3-light-grey">
-            <h4>Game Location</h4>
-            <input id="gameLocation" type="text" class="w3-bar-item w3-input w3-border" >
-                </div>
-        <div class="w3-bar w3-light-grey">
-            <h4>Game Field</h4>
-            <input id="gameField" type="text" class="w3-bar-item w3-input w3-border" >
-            </div> 
         </div>
+        <div class="dropdown">
+            <button id="hole2ndPlace" class="dropbtnLane">2nd Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole2ndPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole2ndPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole2ndPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole2ndPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole2ndPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole2ndPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="hole3rdPlace" class="dropbtnLane">3rd Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole3rdPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole3rdPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole3rdPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole3rdPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole3rdPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole3rdPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="hole4thPlace" class="dropbtnLane">4th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole4thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole4thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole4thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole4thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole4thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole4thPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="hole5thPlace" class="dropbtnLane">5th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole5thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole5thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole5thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole5thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole5thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole5thPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <hole id="hole6thPlace" class="dropbtnLane">6th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(hole, 'hole6thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(hole, 'hole6thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(hole, 'hole6thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(hole, 'hole6thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(hole, 'hole6thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(hole, 'hole6thPlace','White');">White</a>
+            </div>
+        </div>
+    </div>  
+</div>
+<!-- Buttons to assign Colors to place at Split #1 -->
+<div class="w3-container" id="split1Container">
+        <div class="w3-cell-row">
+            <h4>Split: Assign Bibs to Positions</h4>
+            <div class="dropdown">
+                <button id="split11stPlace" class="dropbtnLane">1st Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split11stPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split11stPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split11stPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split11stPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split11stPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split11stPlace','White');">White</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="split12ndPlace" class="dropbtnLane">2nd Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split12ndPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split12ndPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split12ndPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split12ndPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split12ndPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split12ndPlace','White');">White</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="split13rdPlace" class="dropbtnLane">3rd Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split13rdPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split13rdPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split13rdPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split13rdPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split13rdPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split13rdPlace','White');">White</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="split14thPlace" class="dropbtnLane">4th Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split14thPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split14thPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split14thPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split14thPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split14thPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split14thPlace','White');">White</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="split15thPlace" class="dropbtnLane">5th Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split15thPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split15thPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split15thPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split15thPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split15thPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split15thPlace','White');">White</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="split16thPlace" class="dropbtnLane">6th Place</button>
+                <div class="dropdown-content">
+                    <a class="redBib" onclick="updateLaneColor(split1, 'split16thPlace','Red');">Red</a>
+                    <a class="greenBib" onclick="updateLaneColor(split1, 'split16thPlace','Green');">Green</a>
+                    <a class="blueBib" onclick="updateLaneColor(split1, 'split16thPlace','Blue');">Blue</a>
+                    <a class="yellowBib" onclick="updateLaneColor(split1, 'split16thPlace','Yellow');">Yellow</a>
+                    <a class="blackBib" onclick="updateLaneColor(split1, 'split16thPlace','Black');">Black</a>
+                    <a class="whiteBib" onclick="updateLaneColor(split1, 'split16thPlace','White');">White</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- Buttons to assign Colors to place at Finish -->
+<div class="w3-container" id="finishContainer">
+        <div class="w3-cell-row">
+        <h4>Finish: Assign Bibs to Positions</h4>
+        <div class="dropdown">
+            <button id="finish1stPlace" class="dropbtnLane">1st Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish1stPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish1stPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish1stPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish1stPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish1stPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish1stPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="finish2ndPlace" class="dropbtnLane">2nd Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish2ndPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish2ndPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish2ndPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish2ndPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish2ndPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish2ndPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="finish3rdPlace" class="dropbtnLane">3rd Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish3rdPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish3rdPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish3rdPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish3rdPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish3rdPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish3rdPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="finish4thPlace" class="dropbtnLane">4th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish4thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish4thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish4thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish4thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish4thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish4thPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="finish5thPlace" class="dropbtnLane">5th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish5thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish5thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish5thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish5thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish5thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish5thPlace','White');">White</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="finish6thPlace" class="dropbtnLane">6th Place</button>
+            <div class="dropdown-content">
+                <a class="redBib" onclick="updateLaneColor(finish, 'finish6thPlace','Red');">Red</a>
+                <a class="greenBib" onclick="updateLaneColor(finish, 'finish6thPlace','Green');">Green</a>
+                <a class="blueBib" onclick="updateLaneColor(finish, 'finish6thPlace','Blue');">Blue</a>
+                <a class="yellowBib" onclick="updateLaneColor(finish, 'finish6thPlace','Yellow');">Yellow</a>
+                <a class="blackBib" onclick="updateLaneColor(finish, 'finish6thPlace','Black');">Black</a>
+                <a class="whiteBib" onclick="updateLaneColor(finish, 'finish6thPlace','White');">White</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- bottons for New Game and New Player -->
 <div class="w3-container" id="dashboardContainer">
