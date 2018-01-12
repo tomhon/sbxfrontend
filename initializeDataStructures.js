@@ -6,7 +6,8 @@ start = {
     'startLane3' : "Teal",
     'startLane4' : "Teal",
     'startLane5' : "Teal",
-    'startLane6' : "Teal",
+    'startLane6' : "Teal"
+
 }
 
 hole = {
@@ -15,7 +16,7 @@ hole = {
     'hole3rdPlace' : "Teal",
     'hole4thPlace' : "Teal",
     'hole5thPlace' : "Teal",
-    'hole6thPlace' : "Teal",
+    'hole6thPlace' : "Teal"
 }
 
 split1 = {
@@ -24,7 +25,7 @@ split1 = {
     'split13rdPlace' : "Teal",
     'split14thPlace' : "Teal",
     'split15thPlace' : "Teal",
-    'split16thPlace' : "Teal",
+    'split16thPlace' : "Teal"
 }
 
 finish = {
@@ -33,8 +34,9 @@ finish = {
     'finish3rdPlace' : "Teal",
     'finish4thPlace' : "Teal",
     'finish5thPlace' : "Teal",
-    'finish6thPlace' : "Teal",
+    'finish6thPlace' : "Teal"
 }
+
 
 raceData = {
     'user': 'testUser',
