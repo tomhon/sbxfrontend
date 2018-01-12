@@ -16,6 +16,7 @@ function updateLaneColor(courseLocation, buttonSelected, colorSelected) {
         totalLanes++;
         if (courseLocation[item] == 'Teal') {} else {completeLanes++};
         document.getElementById(item).style.backgroundColor = courseLocation[item];
+        console.log('tweaking style' + item);
         document.getElementById(item).parentElement.children[1].style.display = "";
 
         if (courseLocation[item] === 'Yellow' || courseLocation[item] === 'White' ) {
@@ -106,9 +107,10 @@ function saveStartData() {
 
 function saveHoleData() {
 
+
     racePositionComplete = (hole.hole1stPlace != 'Teal') && (hole.hole2ndPlace != 'Teal') && (hole.hole3rdPlace != 'Teal') 
     && (hole.hole4thPlace != 'Teal') && (hole.hole5thPlace != 'Teal') && (hole.hole6thPlace != 'Teal');
-    if (!racePositionComplete) {return}
+    if (!racePositionComplete) {return} 
 
     switch (hole.hole1stPlace) {
         case "Red" : raceData.bibRedHolePosition = 1; break;

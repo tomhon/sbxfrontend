@@ -45,7 +45,7 @@
 }
 
 .dropdown:active .dropdown-content {
-    display: ;
+    display: block;
 }
 
 .dropdown:hover .dropbtn {
