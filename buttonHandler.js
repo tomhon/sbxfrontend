@@ -33,5 +33,43 @@ function updateLaneColor(courseLocation, buttonSelected, colorSelected) {
     document.getElementById("progressBar").innerHTML = percentLanesComplete;
 };
 
+function saveRaceData() {
+    raceData.username = document.getElementById('usernameInput').value;
+    raceData.event = document.getElementById('eventInput').value;
+    raceData.gender = document.getElementById('raceGenderInput').value;
+    raceData.phaseID = document.getElementById('racePhaseInput').value;
+    raceData.raceCodex = document.getElementById('raceCodexInput').value;
+    raceData.temp = document.getElementById('tempInput').value;
+    raceData.precip = document.getElementById('precipInput').value;
+    console.log('RaceDATA '+ raceData);
 
+    postStatusUpdate('raceData','saveRaceDataButton', 'Race Data Saved');
+};
 
+function saveStartData() {
+
+    console.log('startDATA '+ raceData);
+
+    postStatusUpdate('startData','saveStartButton', 'Race Data Saved');
+};
+
+function saveHoleData() {
+
+    console.log('holeDATA '+ raceData);
+
+    postStatusUpdate('holeData','saveHoleButton', 'Race Data Saved');
+};
+
+function saveSplitData() {
+
+    console.log('splitDATA '+ raceData);
+
+    postStatusUpdate('splitData','saveSplitButton', 'Race Data Saved');
+};
+
+function saveFinishData() {
+
+    console.log('finishDATA '+ raceData);
+
+    postStatusUpdate('finishData','saveFinishButton', 'Race Data Saved');
+};

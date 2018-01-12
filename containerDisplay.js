@@ -12,6 +12,7 @@ function hideAllInputContainers() {
     document.getElementById("split1Container").style.display = "none";
     document.getElementById("finishContainer").style.display = "none";
     document.getElementById("dashboardContainer").style.display = "none";
+    document.getElementById("newRaceContainer").style.display = "none";
     };
 function showRaceSetupContainer() {
     hideAllInputContainers();
@@ -36,4 +37,8 @@ function showFinishContainer() {
 function showDashboardContainer() {
     hideAllInputContainers();
     document.getElementById("dashboardContainer").style.display = "block";
+    }
+function showNewRaceContainer() {
+    hideAllInputContainers();
+    document.getElementById("newRaceContainer").style.display = "block";
     }

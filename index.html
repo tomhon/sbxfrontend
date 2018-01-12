@@ -14,12 +14,13 @@
   <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
   <br>
 </div>
-<a onclick="showRaceSetupContainer()" class="w3-bar-item w3-button" href="#">Race Setup </a>
+<a onclick="showRaceSetupContainer()" class="w3-bar-item w3-button" href="#">Race Details </a>
 <a onclick="showStartContainer()" class="w3-bar-item w3-button" href="#">Start</a>
 <a onclick="showHoleContainer()" class="w3-bar-item w3-button" href="#">Hole</a>
 <a onclick="showSplit1Container()" class="w3-bar-item w3-button" href="#">Split 1</a>
 <a onclick="showFinishContainer()" class="w3-bar-item w3-button" href="#">Finish</a>
 <a onclick="showDashboardContainer()" class="w3-bar-item w3-button" href="#">Dashboard</a>
+<a onclick="showNewRaceContainer()" class="w3-bar-item w3-button" href="#">New Race</a>
 </nav>
 
 <header class="w3-bar w3-card w3-theme">
@@ -31,40 +32,70 @@
 <!-- buttons for Passes, Tackles, Dribbles & Goals -->
 <div class="w3-container" id="raceSetupContainer">
     <div class="w3-cell-row w3-red">
-            <h4>Passes</h4>
-            <!-- <input type="button" id="successfulPassButton" class="w3-button w3-black w3-border" value="Successful" onclick="successfulPass()"> -->
-            <input type="button" id="successfulPassButton" class="w3-button w3-black w3-border" value="Successful" 
-            onclick="postStatusUpdate('successfulPass','successfulPassButton', 'Successful');">
-            <input type="button" id="attemptedPassButton" class="w3-button w3-black w3-border" value="Attempted" 
-            onclick="postStatusUpdate('attemptedPass','attemptedPassButton', 'Attempted');">
-        </div>  
-    <div class="w3-cell-row">
-            <h4>Tackles</h4>
-            <input type="button" class="w3-button w3-black  w3-border" value="Successful" 
-               id="successfulTackleButton" onclick="postStatusUpdate('successfulTackle','successfulTackleButton', 'Successful');">
-            <input type="button" class="w3-button w3-black  w3-border" value="Attempted" 
-               id="attemptedTackleButton" onclick="postStatusUpdate('attemptedTackle','attemptedTackleButton', 'Attempted');">
+            <h4>Race Details</h4>
+            <form>
+                
+                <label>UserName / Email</label>
+                <input class="w3-input" type="email" value="user@email.com" id="usernameInput" autocomplete="on" onclick="document.getElementById('saveRaceDataButton').value = 'Save'">
+
+                <label>Race Name / Location</label>
+                <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="eventInput">
+                   
+                Gender
+                <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="raceGenderInput" name="raceCodex" class = "w3-input">
+                    <option value="Women">Women</option>    
+                    <option value="Men">Men</option>
+                        </select>
+                Race Phase
+                <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="racePhaseInput" name="phaseID" class = "w3-input">
+                    <option value="Heat1">Heat1</option>
+                    <option value="Heat2">Heat2</option>
+                    <option value="Heat3">Heat3</option>
+                    <option value="Heat4">Heat4</option>
+                    <option value="Heat5">Heat5</option>
+                    <option value="Heat6">Heat6</option>
+                    <option value="Quarter1">Quarter1</option>
+                    <option value="Quarter2">Quarter2</option>
+                    <option value="Quarter3">Quarter3</option>
+                    <option value="Quarter4">Quarter4</option>
+                    <option value="Semi1">Semi1</option>
+                    <option value="Semi2">Semi2</option>
+                    <option value="Final">Final</option>
+                    </select>
+
+                
+                <label>Race Codex</label>
+                <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="raceCodexInput">                 
+                    Temperature (C)
+                    <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="tempInput" name="tempInput" class = "w3-input">
+                        <option value="-5">-5</option>    
+                        <option value="-4">-4</option>
+                        <option value="-3">-3</option>    
+                        <option value="-2">-2</option>
+                        <option value="-1">-1</option>    
+                        <option value="0">0</option>
+                        <option value="1">1</option>    
+                        <option value="2">2</option>
+                        <option value="3">3</option>    
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                            </select>
+                    Precipitation
+                    <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="precipInput" name="precipInput" class = "w3-input">
+                        <option value="None">None</option>
+                        <option value="Rain">Rain</option>
+                        <option value="Light Snow">Light Snow</option>
+                        <option value="Heavy Snow">Heavy Snow</option>
+                        </select>
+                
+                    </form>
         </div> 
+
+
     <div class="w3-cell-row">
-            <h4>Dribbles</h4>
-            <input type="button" class="w3-button w3-black  w3-border" value="Successful" 
-                id="successfulDribbleButton" onclick="postStatusUpdate('successfulDribble','successfulDribbleButton', 'Successful');">
-            <input type="button" class="w3-button w3-black  w3-border" value="Attempted" 
-                id="attemptedDribbleButton" onclick="postStatusUpdate('attemptedDribble','attemptedDribbleButton', 'Attempted');">
-        </div> 
-    <div class="w3-cell-row">
-            <h4>Shots</h4>
-            <input type="button" class="w3-button w3-black  w3-border" value="On Frame" 
-                id="shotOnFrameButton" onclick="postStatusUpdate('shotOnFrame','shotOnFrameButton', 'On Frame');">
-            <input type="button" class="w3-button w3-black  w3-border" value="Off Frame" 
-                id="shotOffFrameButton" onclick="postStatusUpdate('shotOffFrame','shotOffFrameButton', 'Off Frame');">
-        </div> 
-    <div class="w3-cell-row">
-            <h4>Score</h4>
-            <input type="button" class="w3-button w3-black  w3-border" value="Goal" 
-                id="goalButton" onclick="postStatusUpdate('goal','goalButton', 'Goal');">
-            <input type="button" class="w3-button w3-black  w3-border" value="Assist" 
-                id="assistButton" onclick="postStatusUpdate('assist','assistButton', 'Assist');">
+            <br>
+            <input type="button" class="w3-button w3-black  w3-border" value="Save" style="right: 0%"
+                id="saveRaceDataButton" onclick="saveRaceData()">
         </div> 
     </div>
 <!-- Buttons to assign Bibs to Start Lanes -->
@@ -141,9 +172,10 @@
             <br>
             <div class="w3-light-grey">
                     <div id = "progressBar" class="w3-container w3-blue" style="width:0%; background-color: green"></div>
-            </div><br>
+            </div>
+            <br>
             <div>
-                    <button class="w3-button w3-block w3-green">Submit</button>
+                    <input type="button" class="w3-button w3-black  w3-border" value="Save" onclick="saveStartData()" id="saveStartButton">
             </div>
          
     </div>
@@ -218,7 +250,12 @@
                 <a class="whiteBib" onclick="updateLaneColor(hole, 'hole6thPlace','White');">White</a>
             </div>
         </div>
-    </div>  
+    </div>
+        <br>
+
+        <div>
+                <input type="button" class="w3-button w3-black  w3-border" value="Save" onclick="saveHoleData()" id="saveHoleButton">
+        </div>
 </div>
 <!-- Buttons to assign Colors to place at Split #1 -->
 <div class="w3-container" id="split1Container">
@@ -290,6 +327,10 @@
                     <a class="whiteBib" onclick="updateLaneColor(split1, 'split16thPlace','White');">White</a>
                 </div>
             </div>
+    </div>
+    <br>
+    <div>
+            <input type="button" class="w3-button w3-black  w3-border" value="Save" onclick="saveSplitData()" id="saveSplitButton">
     </div>
 </div>
 
@@ -364,21 +405,29 @@
             </div>
         </div>
     </div>
+    <br>
+    <div>
+            <input type="button" class="w3-button w3-black  w3-border" value="Save" onclick="saveFinishData()" id="saveFinishButton">
+    </div>
 </div>
 
-<!-- bottons for New Game and New Player -->
+
 <div class="w3-container" id="dashboardContainer">
-    <div class="w3-cell-row">
-            <h4>Maintenance</h4>
-                <input type="button" class="w3-button w3-black" value="New Game" 
-                    id="newGameButton" onclick="postStatusUpdate('newGame','newGameButton', 'New Game');">
-                <input type="button" class="w3-button w3-black" value="New Player" 
-                    id="newPlayerButton" onclick="postStatusUpdate('newPlayer','newPlayerButton', 'New Player');">
-    </div>  
+        <div >
+                <iframe width="800" height="600" src="http://sbxdashboard.azurewebsites.net" frameborder="0" allowFullScreen="true"></iframe>
+         </div> 
 </div>
+
+<div class="w3-container" id="newRaceContainer">
+        <div class="w3-cell-row">
+                <input type="button" class="w3-button w3-black  w3-border" value="Create New Race" 
+                    id="newRaceButton" onclick="initializeDataStructures();">
+            </div> 
+</div>
+
 
 <footer class="w3-container w3-theme w3-margin-top">
-  <h4>Footer</h4>
+          <img src="logo.png" height="50" >
 </footer>
 
 
@@ -396,6 +445,10 @@
         console.log(document.getElementById("buttonID").value);
     }
 
+</script>
+<script>
+    var start, hole, split1, finish, raceData;
+    initializeDataStructures();
 </script>
 
 </body>
