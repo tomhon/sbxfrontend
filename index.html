@@ -7,6 +7,20 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="buttonStyles.css">
+<style>
+    .floating-box {
+    display: inline-block;
+    width: 250px;
+    height: 75px;
+    margin: 5px
+        }
+    .floating-box-narrow {
+    display: inline-block;
+    width: 125px;
+    height: 75px;
+    margin: 5px
+        }
+</style>
 <body style="max-width:600px">
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
@@ -34,18 +48,22 @@
     <div class="w3-cell-row w3-red">
             <h4>Race Details</h4>
             <form>
-                
-                <label>UserName / Email</label>
-                <input class="w3-input" type="email" value="user@email.com" id="usernameInput" autocomplete="on" onclick="document.getElementById('saveRaceDataButton').value = 'Save'">
-
-                <label>Race Name / Location</label>
-                <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="eventInput">
-                   
+                <div class="floating-box">
+                    <label>UserName / Email</label>
+                    <input class="w3-input" type="email" value="user@email.com" id="usernameInput" autocomplete="on" onclick="document.getElementById('saveRaceDataButton').value = 'Save'">
+                </div>
+                <div class="floating-box">
+                    <label>Race Name / Location</label>
+                    <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="eventInput">
+                </div>  
+                <div class="floating-box-narrow">
                 Gender
                 <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="raceGenderInput" name="raceCodex" class = "w3-input">
                     <option value="Women">Women</option>    
                     <option value="Men">Men</option>
                         </select>
+                </div>
+                <div class="floating-box-narrow">
                 Race Phase
                 <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="racePhaseInput" name="phaseID" class = "w3-input">
                     <option value="Heat1">Heat1</option>
@@ -62,10 +80,13 @@
                     <option value="Semi2">Semi2</option>
                     <option value="Final">Final</option>
                     </select>
+                </div>
 
-                
+                <div class="floating-box">
                 <label>Race Codex</label>
-                <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="raceCodexInput">                 
+                <input onclick="document.getElementById('saveRaceDataButton').value = 'Save'" class="w3-input" type="text" id="raceCodexInput">  
+                </div>
+                <div class="floating-box-narrow">               
                     Temperature (C)
                     <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="tempInput" name="tempInput" class = "w3-input">
                         <option value="-5">-5</option>    
@@ -80,6 +101,8 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                             </select>
+                </div>
+                <div class="floating-box-narrow">
                     Precipitation
                     <select onclick="document.getElementById('saveRaceDataButton').value = 'Save'" id="precipInput" name="precipInput" class = "w3-input">
                         <option value="None">None</option>
@@ -87,6 +110,7 @@
                         <option value="Light Snow">Light Snow</option>
                         <option value="Heavy Snow">Heavy Snow</option>
                         </select>
+                    </div>
                 
                     </form>
         </div> 
@@ -100,6 +124,7 @@
     </div>
 <!-- Buttons to assign Bibs to Start Lanes -->
 <div class="w3-container" id="startContainer">
+
         <div class="w3-cell-row">
                 <h4>Start: Assign Bibs to Lanes</h4>
                 <div class="dropdown">
